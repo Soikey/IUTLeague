@@ -16,3 +16,10 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/* Change the color to red */
+.privacy-icon {
+    color: red;
+    font-size: 24px;
+}
+
