@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Gradient Blue Background</title>
+    <title>index</title>
     <link rel="stylesheet" href="wwwroot/css/site.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - IUTLeague</title>
@@ -12,11 +12,46 @@
     <link rel="stylesheet" href="~/IUTLeague.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdn.syncfusion.com/ej2/22.2.5/dist/ej2.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="site.css">
 </head>
+
+
 <body>
-    <header>
-    </header>
+    @*header starts here*@
+    <header class="head-area">
+    <div class="header-container">
+      <div class="logo">
+        <h1><span>IUT</span>League</h1>
+      </div>
+      <div class="mobile-nav">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="menu">
+        <ul class="menu1">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#" class="">About</a></li>
+          @*<li><a href="#" class="">Works</a></li>*@
+          <li><a href="#" class="">News</a></li>
+          <li><a href="#" class="">Services</a></li>
+          @*<li><a href="#" class="">Contact</a></li>*@
+        </ul>
+         </div>
+    </div>
+
+  </header>
+
+
+  <script>
+    $(document).ready(function(){
+      $(".mobile-nav i").click(function(){
+          $(".menu").toggleClass('mobile-menu');
+      });
+    })
+  </script>
+    @*header ends here*@
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
