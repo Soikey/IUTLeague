@@ -33,7 +33,7 @@ namespace IUTLeague.Controllers
             return View();
         }
 
-        public IActionResult AdminUse()
+        public IActionResult AdminLogin()
         {
             return View();
         }

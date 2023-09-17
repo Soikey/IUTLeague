@@ -1,5 +1,6 @@
 html {
     font-size: 14px;
+    color: white;
 }
 
 @media (min-width: 768px) {
@@ -12,14 +13,14 @@ html {
 html {
     position: relative;
     min-height: 100%;
-    
+    color: white;
 }
 
 body {
     margin-bottom: 60px;
     margin-top: 0px;
     background: linear-gradient(to bottom, #0074E4, #001F4D);
-    color: #ffffff;
+    color: white;
 }
 
 
@@ -369,9 +370,12 @@ body {
 
 
 /*footer design starts here*/
-
+.page-footer{
+    color: white;
+}
 .main {
     height: 50vh;
+    color: white;
 }
 
 .hover-effect1 {
