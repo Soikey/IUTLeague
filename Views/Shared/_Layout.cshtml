@@ -35,14 +35,12 @@
       </div>
       <div class="menu">
         <ul class="menu1">
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="#" class="">About</a></li>
-          @*<li><a href="#" class="">Works</a></li>*@
-          <li><a href="#" class="">News</a></li>
-          <li><a href="#" class="">Services</a></li>
-          @*<li><a href="#" class="">Contact</a></li>*@
+          <li><a asp-controller="Home" asp-action="Index" class="active">Home</a></li>
+          <li><a asp-controller="Home" asp-action="About" class="">About</a></li>
+          <li><a asp-controller="Home" asp-action="News" class="">News</a></li>
+          <li><a asp-controller="Home" asp-action="AdminUse" class="">Admin</a></li>
         </ul>
-         </div>
+      </div>
     </div>
 
   </header>
