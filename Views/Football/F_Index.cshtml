@@ -1,10 +1,84 @@
-﻿
-@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@{
+    Layout = "layout_Football";
+}
+
 @{
     ViewData["Title"] = "Football";
 }
 <h1>@ViewData["Title"]</h1>
 
 <p>Use this page to detail your site's privacy policy.</p>
+
+
+
+<div class="card">
+  <div class="card-content">
+    <div class="teams">
+      <p>Man United</p>
+      <p></p>
+      <p>Sunderland</p>
+    </div>
+    <div class="scores">
+      <h1>3</h1>
+      <p class="vs-inactive">vs</p>
+      <h1>1</h1>
+    </div>
+    <div class="locations">
+      <span><i class="fa fa-map-marker-alt"></i> Old Trafford</span>
+      <span></span>
+      <span><i class="fas fa-location-arrow"></i> Manchester</span>
+    </div>
+  </div>
+  <div class="card-footer card-footer-inactive">
+    <i class="fa fa-list-alt"></i> See Details
+    <i class="far fa-arrow-alt-circle-right float-right"></i>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-content">
+    <div class="teams">
+      <p>Arsenal</p>
+      <p></p>
+      <p>West Brom</p>
+    </div>
+    <div class="scores">
+      <h1>1</h1>
+      <p class="vs-active">vs</p>
+      <h1>0</h1>
+    </div>
+    <div class="locations">
+      <span><i class="fas fa-map-marker-alt"></i> Emirates Stadium</span>
+      <span></span>
+      <span><i class="fas fa-location-arrow"></i> London</span>
+    </div>
+  </div>
+  <div class="card-footer card-footer-active">
+    <i class="fas fa-broadcast-tower"></i> Live 
+    <i class="far fa-arrow-alt-circle-right float-right"></i>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-content">
+    <div class="teams">
+      <p>Liverpool</p>
+      <p></p>
+      <p>Leicester City</p>
+    </div>
+    <div class="scores">
+      <img src="https://www.seeklogo.net/wp-content/uploads/2011/08/liverpool-logo-vector.png" alt="" height="100">
+      <p class="vs-future">vs</p>
+      <img src="https://www.seeklogo.net/wp-content/uploads/2015/10/leicester-city-fc-vector-logo-eps-svg.png" alt="" height="100">
+    </div>
+    <div class="locations">
+      <span><i class="fas fa-map-marker-alt"></i> Anfield</span>
+      <span></span>
+      <span><i class="fas fa-location-arrow"></i> Liverpool</span>
+    </div>
+  </div>
+  <div class="card-footer card-footer-future">
+    <i class="far fa-calendar-alt"></i> Monday, January 2 
+    <span class="float-right"><i class="far fa-clock"></i> 9:30 AM</span>
+  </div>
+</div>
