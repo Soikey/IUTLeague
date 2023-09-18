@@ -37,4 +37,10 @@ app.MapControllerRoute(
     defaults: new { controller = "Football", action = "Index" }
 );
 
+app.MapControllerRoute(
+    name: "Admin",
+    pattern: "{controller=Admin}/{action=Index}/{id?}",
+    defaults: new { controller = "Admin", action = "Index" }
+);
+
 app.Run();

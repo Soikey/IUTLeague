@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using IUTLeague.Models;
+using IUTLeague.Models; 
 
 namespace IUTLeague.Controllers
 {
@@ -18,13 +18,22 @@ namespace IUTLeague.Controllers
             _context = context;
         }
 
+        /*public AdminController()
+        {
+        }*/
+
+        public ActionResult Index()
+        {
+            return View("~/Views/Admin/Index.cshtml");
+        }
+
         // GET: Admin
-        public async Task<IActionResult> Index()
+        /*public async Task<IActionResult> Index()
         {
               return _context.Admins != null ? 
                           View(await _context.Admins.ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.Admins'  is null.");
-        }
+        }*/
 
         // GET: Admin/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -154,9 +163,28 @@ namespace IUTLeague.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        // GET: Admin/Login
+        public IActionResult Login()
+        {
+            return View();
+        }
+
         private bool AdminExists(int id)
         {
-          return (_context.Admins?.Any(e => e.Id == id)).GetValueOrDefault();
+          return (_context.Admins?.Any(e => e.Id == id )).GetValueOrDefault();
         }
+
+        public bool VerifyCredentials(string username, string password)
+        {
+            // Implement your authentication logic here, e.g., checking against a database.
+            // Return true if the credentials are valid; otherwise, return false.
+            // Example:
+            if (username == "admin" && password == "password")
+            {
+                return true;
+            }
+            return false;
+        }
+
     }
 }
