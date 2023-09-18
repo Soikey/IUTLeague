@@ -199,7 +199,7 @@ body {
     }
 }
 
-.d_card {
+.card {
     position: relative;
     display: -webkit-box;
     display: flex;
@@ -216,12 +216,12 @@ body {
 }
 
 @media (min-width: 600px) {
-    .d_card {
+    .card {
         height: 350px;
     }
 }
 
-.d_card:before {
+.card:before {
     content: "";
     position: absolute;
     top: 0;
@@ -237,7 +237,7 @@ body {
     pointer-events: none;
 }
 
-.d_card:after {
+.card:after {
     content: "";
     display: block;
     position: absolute;
@@ -256,22 +256,37 @@ body {
     transition: transform calc(var(--d) * 2) var(--e), -webkit-transform calc(var(--d) * 2) var(--e);
 }
 
-.d_card:nth-child(1):before {
-    background-image: url("Football.jpg");
+.card1{
+    background-image: url('Football.jpg');
 }
 
-.d_card:nth-child(2):before {
-    background-image: url("basketball_ball.png");
+.card2 {
+    background-image: url('basketball_ball.png');
 }
 
-.d_card:nth-child(3):before {
-    background-image: url("Badminton.png");
-
+.d_card[data-img="Badminton.png"]::before {
+    background-image: url('Badminton.png');
 }
 
-.d_card:nth-child(4):before {
-    background-image: url(Chess.png);
+.d_card[data-img="Chess.png"]::before {
+    background-image: url('Chess.png');
 }
+
+.d_card[data-img="Cricket.png"]::before {
+    background-image: url('Cricket.png');
+}
+
+.d_card[data-img="Volleyball.png"]::before {
+    background-image: url('Volleyball.png');
+}
+.d_card[data-img="Tennis.png"]::before {
+    background-image: url('Tennis.png');
+}
+
+.d_card[data-img="Table_Tennis.png"]::before {
+    background-image: url('Table_Tennis.png');
+}
+
 
 
 .content {
@@ -306,7 +321,7 @@ body {
 }
 
 @media (hover: hover) and (min-width: 600px) {
-    .d_card:after {
+    .card:after {
         -webkit-transform: translateY(0);
         transform: translateY(0);
     }
@@ -326,32 +341,32 @@ body {
             transition: transform var(--d) var(--e), opacity var(--d) var(--e), -webkit-transform var(--d) var(--e);
         }
 
-    .d_card:hover,
-    .d_card:focus-within {
+    .card:hover,
+    .card:focus-within {
         -webkit-box-align: center;
         align-items: center;
     }
 
-        .d_card:hover:before,
-        .d_card:focus-within:before {
+        .card:hover:before,
+        .card:focus-within:before {
             -webkit-transform: translateY(-4%);
             transform: translateY(-4%);
         }
 
-        .d_card:hover:after,
-        .d_card:focus-within:after {
+        .card:hover:after,
+        .card:focus-within:after {
             -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
         }
 
-        .d_card:hover .content,
-        .d_card:focus-within .content {
+        .card:hover .content,
+        .card:focus-within .content {
             -webkit-transform: translateY(0);
             transform: translateY(0);
         }
 
-            .d_card:hover .content > *:not(.heading),
-            .d_card:focus-within .content > *:not(.heading) {
+            .card:hover .content > *:not(.heading),
+            .card:focus-within .content > *:not(.heading) {
                 opacity: 1;
                 -webkit-transform: translateY(0);
                 transform: translateY(0);
@@ -359,10 +374,10 @@ body {
                 transition-delay: calc(var(--d) / 8);
             }
 
-            .d_card:focus-within:before,
-            .d_card:focus-within:after,
-            .d_card:focus-within .content,
-            .d_card:focus-within .content > *:not(.heading) {
+            .card:focus-within:before,
+            .card:focus-within:after,
+            .card:focus-within .content,
+            .card:focus-within .content > *:not(.heading) {
                 -webkit-transition-duration: 0s;
                 transition-duration: 0s;
             }
@@ -371,7 +386,7 @@ body {
 
 /*footer design starts here*/
 .page-footer{
-    color: white;
+    color: white
 }
 .main {
     height: 50vh;
