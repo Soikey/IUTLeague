@@ -1,22 +1,153 @@
-﻿$gray: #808080;
+﻿/*
+$gray: #808080;
 $white: #ffffff;
 $copy: #222222;
 $green: #2e8b57;
 $orange: #daa520;
 $silver: #b4b4b4;
 $cyan: #1192B0;
+*/
 
 body {
-    color: $gray;
+    color: mediumpurple;
     font-family: 'Nanum Gothic', sans-serif;
-    background: linear-gradient(to bottom, #0074E4, #001F4D);
-    height: 100vh;
+    /*background: linear-gradient(to bottom, #0074E4, #001F4D);*/
+    background: linear-gradient(to bottom, #000000, #FFFFFF);
+    height: 50px;
     margin-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
+
+
+.sport-head-area {
+    background-color: rebeccapurple;
+    width: 100%;
+    padding: 0px 30px;
+    z-index: 111;
+    border-bottom: #909090ad;
+}
+
+.sport-header-container {
+    width: 100%;
+    margin: auto;
+    display: table;
+}
+
+.sport-logo {
+    float: left;
+    padding: 10px 0;
+}
+
+    .logo h1 {
+        color: #fff;
+        font-size: 35px;
+        font-weight: 600;
+        padding: 5px;
+    }
+
+    .logo span {
+        color: #ff4a44;
+    }
+
+.football-menu {
+    float: left; /**********************  CENTER dite hobe ***********/
+}
+
+.football-nav {
+    display: none;
+}
+
+.football-menu1 li {
+    display: inline-block;
+    margin: 22px 5px;
+}
+
+    .football-menu1 li a {
+        color: #fff;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 1px;
+        padding: 15px 10px;
+        transition: .5s;
+    }
+
+.football-menu1 a:hover,
+.football-menu1 .active {
+    color: #ff4a44;
+}
+
+.football-menu1 li a:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #ff4a44;
+    bottom: 0px;
+    left: 0;
+    transition: all .5s;
+}
+
+.football-menu1 lia a:hover:after {
+    width: 100%;
+}
+
+.football-menu1 li .active:after {
+    width: 100%;
+}
+
+.football-mobile-nav {
+    float: right;
+    margin: 10px;
+    padding: 10px;
+    font-size: 24px;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width:978px) {
+    .football-menu {
+        float: none;
+        position: absolute;
+        background-color: rebeccapurple;
+        width: 100%;
+        left: 0;
+        top: 85px;
+        padding: 30px 0 150px 0;
+        border-top: 1px solid #4a4848;
+        clip-path: circle(0% at 100% 0%);
+        transition: all .8s;
+    }
+
+    .football-menu1 li {
+        display: block;
+        text-align: center;
+        margin: 25px 5px;
+    }
+
+    .football-nav {
+        display: block;
+    }
+
+    .football-menu {
+        clip-path: circle(112% at 100% 0%);
+    }
+
+    .football-menu1 li a:after {
+        display: none;
+    }
+}
+
+/*design for header ends here*/
+
+
 
 .card {
     width: 500px;
@@ -26,19 +157,20 @@ body {
 }
 
 .card-active {
-    color: $copy;
+    color: #222222;
 }
 
 .vs-active {
-    color: $green;
+    color: green;
 }
 
 .vs-inactive {
-    color: $gray;
+    color: gray;
 }
 
 .vs-future {
-    color: $orange;
+    color: orange;
+
 }
 
 .teams {
@@ -80,7 +212,7 @@ body {
     grid-template-columns: 1fr 50px 1fr;
     text-align: center;
     padding-bottom: 10px;
-    color: $silver;
+    color: silver;
 }
 
 .card-footer {
@@ -92,19 +224,19 @@ body {
     padding: .5em 1em;
     color: #ffffff;
     border-top: 1px solid rgba(0, 0, 0, .05) !important;
-    background: $gray;
+    background: gray;
 }
 
 .card-footer-inactive {
-    background: $gray;
+    background: gray;
 }
 
 .card-footer-active {
-    background: $green;
+    background: green;
 }
 
 .card-footer-future {
-    background: $orange;
+    background: orange;
 }
 
 .float-right {

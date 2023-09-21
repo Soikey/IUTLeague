@@ -1,10 +1,215 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+﻿@{
+    Layout = "_Layout";
+}
+@{
+    ViewData["Title"] = "Players";
+}
 
+<head>
+     <link rel="stylesheet" href="~/css/Players.css" />
+</head>
+
+<body>
+    <section>
+  <div class="container flow-content">
+    <h2 class="section-title">Our GOATs</h2>
+    <ul role="list" class="grid">
+      <li>
+        <article class="card" data-visible="false">
+          <div class="card__front flow-content">
+            <img class="card__img mx-auto" src="wwwroot/css/p1.jpg" alt="" />
+            <div class="flow-content" data-spacing="sm">
+              <p class="card__name">John Smith</p>
+              <p class="card__position">Project Manager</p>
+            </div>
+          </div>
+          <div class="card__back flow-content">
+            <p class="card__name">John Smith</p>
+            <q>Success is a team effort, and I'm proud to be part of this incredible team.</q>
+            <ul role="list" class="card__social flex-group">
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-twitter fa-xl"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-linkedin fa-xl"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <footer class="card__footer">
+            <button data-card-controller class="card__toggle">
+              <i class="fa-solid fa-plus card__toggle-icon"></i>
+            </button>
+          </footer>
+        </article>
+      </li>
+      <li>
+        <article class="card" data-visible="false">
+          <div class="card__front flow-content">
+            <img class="card__img mx-auto" src="wwwroot/css/p2.jpg" alt="John Smith (from Unsplash)" />
+            <div class="flow-content" data-spacing="sm">
+              <p class="card__name">Michael Thompson</p>
+              <p class="card__position">Marketing Specialist</p>
+            </div>
+          </div>
+          <div class="card__back flow-content">
+            <p class="card__name">Michael Thompson</p>
+            <q>I believe in the power of storytelling to connect brands with their audience.</q>
+            <ul role="list" class="card__social flex-group">
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-twitter fa-xl"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-linkedin fa-xl"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <footer class="card__footer">
+            <button data-card-controller class="card__toggle">
+              <i class="fa-solid fa-plus card__toggle-icon"></i>
+            </button>
+          </footer>
+        </article>
+      </li>
+      <li>
+        <article class="card" data-visible="false">
+          <div class="card__front flow-content">
+            <img class="card__img mx-auto" src="wwwroot/css/p3.jpg" alt="John Smith (from Unsplash)" />
+            <div class="flow-content" data-spacing="sm">
+              <p class="card__name">Jessica Lee</p>
+              <p class="card__position">Sales Manager</p>
+            </div>
+          </div>
+          <div class="card__back flow-content">
+            <p class="card__name">Jessica Lee</p>
+            <q>Building strong relationships with clients is at the heart of my approach to sales.</q>
+            <ul role="list" class="card__social flex-group">
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-twitter fa-xl"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-linkedin fa-xl"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <footer class="card__footer">
+            <button data-card-controller class="card__toggle">
+              <i class="fa-solid fa-plus card__toggle-icon"></i>
+            </button>
+          </footer>
+        </article>
+      </li>
+      <li>
+        <article class="card" data-visible="false">
+          <div class="card__front flow-content">
+            <img class="card__img mx-auto" src="wwwroot/css/p4.jpg" alt="" />
+            <div class="flow-content" data-spacing="sm">
+              <p class="card__name">Mark Johnson</p>
+              <p class="card__position">Software Engineer</p>
+            </div>
+          </div>
+          <div class="card__back flow-content">
+            <p class="card__name">Mark Johnson</p>
+            <q>I believe in pushing the boundaries of technology to create innovative solutions for our users.</q>
+            <ul role="list" class="card__social flex-group">
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-twitter fa-xl"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-linkedin fa-xl"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <footer class="card__footer">
+            <button data-card-controller class="card__toggle">
+              <i class="fa-solid fa-plus card__toggle-icon"></i>
+            </button>
+          </footer>
+        </article>
+      </li>
+      <li>
+        <article class="card" data-visible="false">
+          <div class="card__front flow-content">
+            <img class="card__img mx-auto" src="wwwroot/css/p5.jpg" alt="John Smith (from Unsplash)" />
+            <div class="flow-content" data-spacing="sm">
+              <p class="card__name">Michael Thompson</p>
+              <p class="card__position">Graphic Designer</p>
+            </div>
+          </div>
+          <div class="card__back flow-content">
+            <p class="card__name">Michael Thompson</p>
+            <q>Design is all about finding beauty in simplicity, and I love bringing ideas to life.</q>
+            <ul role="list" class="card__social flex-group">
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-twitter fa-xl"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-linkedin fa-xl"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <footer class="card__footer">
+            <button data-card-controller class="card__toggle">
+              <i class="fa-solid fa-plus card__toggle-icon"></i>
+            </button>
+          </footer>
+        </article>
+      </li>
+      <li>
+        <article class="card" data-visible="false">
+          <div class="card__front flow-content">
+            <img class="card__img mx-auto" src="wwwroot/css/p6.jpg" alt="" />
+            <div class="flow-content" data-spacing="sm">
+              <p class="card__name">David Wilson</p>
+              <p class="card__position">Junior Developer</p>
+            </div>
+          </div>
+          <div class="card__back flow-content">
+            <p class="card__name">David Wilson</p>
+            <q>Coding is my passion, and I'm excited to contribute my skills to this project.</q>
+            <ul role="list" class="card__social flex-group">
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-twitter fa-xl"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa-brands fa-linkedin fa-xl"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <footer class="card__footer">
+            <button data-card-controller class="card__toggle">
+              <i class="fa-solid fa-plus card__toggle-icon"></i>
+            </button>
+          </footer>
+        </article>
+      </li>   
+    </ul>
+  </div>
+</section>
 </body>
 </html>
+
+
