@@ -54,7 +54,7 @@ body {
     }
 
 .football-menu {
-    float: left; /**********************  CENTER dite hobe ***********/
+    float: inherit; /**********************  CENTER dite hobe ***********/
 }
 
 .football-nav {

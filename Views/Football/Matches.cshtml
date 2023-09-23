@@ -1,0 +1,48 @@
+﻿@{
+    Layout = "layout_Football";
+}
+<head>
+    <link rel="stylesheet" href="~/css/Matches.css">
+</head>
+@model List<Match>
+
+<div class="container">
+    @if (Model != null && Model.Count > 0)
+    {
+        @foreach (var Match in Model)
+        {
+            <div class="row">
+                <div class="col-md-6">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="teams">
+                            <p>@Match.Home_Team</p>
+                            <p></p>
+                            <p>@Match.Away_Team</p>
+                        </div>
+                        <div class="scores">
+                            <h1>@Match.Home_Goals</h1>
+                            <p class="vs-inactive">vs</p>
+                            <h1>@Match.Away_Goals</h1>
+                        </div>
+                        <div class="locations">
+                            <span><i class="fa fa-map-marker-alt"></i>Old Trafford</span>
+                            <span></span>
+                            <span><i class="fas fa-location-arrow"></i>Manchester</span>
+                        </div>
+                    </div>
+                    <div class="card-footer card-footer-inactive">
+                        <i class="fa fa-list-alt"></i> See Details
+                        <i class="far fa-arrow-alt-circle-right float-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        }
+    }
+    else
+    {
+        <p>No matches available.</p>
+    }
+</div>
