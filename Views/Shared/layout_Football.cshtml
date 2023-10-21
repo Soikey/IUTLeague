@@ -3,7 +3,6 @@
 }
 <head>
     
-    <link rel="stylesheet" href="wwwroot/css/F_Index.css" asp-append-version="true"/>
     @*<title>@ViewData["Title"] - FootballLeague</title>*@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/22.2.5/material.css" />
@@ -27,20 +26,20 @@
       <div class="sport-logo">
         <h1><span>Football</span>League</h1>
       </div>
-     <ul class="football-menu1">
+      <div class="football-nav">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="menu">
+        <ul class="football-menu1">
            <li><a asp-controller="Football" asp-action="Matches" class="active">MATCHES</a></li>
            <li><a asp-controller="Football" asp-action="Standings" class="">STANDINGS</a></li>
            <li><a asp-controller="Football" asp-action="Stats" class="">STATS</a></li>
            <li><a asp-controller="Football" asp-action="Players" class="">PLAYERS</a></li>
-    </ul>
-    </div>
+        </ul>
+        </div>
+        </div>
     </header>
 
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 @*header ends here*@
   </header>
   

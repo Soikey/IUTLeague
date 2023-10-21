@@ -264,26 +264,26 @@ body {
     background-image: url('basketball_ball.png');
 }
 
-.d_card[data-img="Badminton.png"]::before {
+.card3 {
     background-image: url('Badminton.png');
 }
 
-.d_card[data-img="Chess.png"]::before {
+.card4 {
     background-image: url('Chess.png');
 }
 
-.d_card[data-img="Cricket.png"]::before {
+.card5 {
     background-image: url('Cricket.png');
 }
 
-.d_card[data-img="Volleyball.png"]::before {
+.card6 {
     background-image: url('Volleyball.png');
 }
-.d_card[data-img="Tennis.png"]::before {
+.card7 {
     background-image: url('Tennis.png');
 }
 
-.d_card[data-img="Table_Tennis.png"]::before {
+.card8 {
     background-image: url('Table_Tennis.png');
 }
 
