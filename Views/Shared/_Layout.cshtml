@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    @*<title>index</title>*@
-    @*<link rel="stylesheet" href="wwwroot/css/site.css">*@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - IUTLeague</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
@@ -14,13 +12,10 @@
     <script src="https://cdn.syncfusion.com/ej2/22.2.5/dist/ej2.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    @*<link rel="stylesheet" href="site.css">*@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/4d0b4c932e.js" crossorigin="anonymous"></script>
 
 </head>
-
-
 <body>
     <header class="head-area">
     <div class="header-container">
@@ -41,21 +36,13 @@
     </div>
   </header>
 
-
-  @*<script>
-    $(document).ready(function(){
-      $(".mobile-nav i").click(function(){
-          $(".menu").toggleClass('mobile-menu');
-      });
-    })
-  </script>*@
-    @*header ends here*@
-
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
+
+     @*Footer starts here*@
 
     <footer class="border-top footer text-muted">
         <div class="container">
@@ -73,16 +60,12 @@
     @await RenderSectionAsync("Scripts", required: false)
     <ejs-scripts></ejs-scripts>
 
-
-
-    @*Footer starts here*@
-
+   
 
     <div class="main"></div>
     <footer id="Footer"style="background-color:#142440;" class="page-footer font-small pt-4">
       <div style="background-color:#142440;" class="container text-center text-md-left">
           
-      
       <!-- Social buttons -->
       <div class="hover-effect1">
       <ul  style="background-color:#142440;" class="list-unstyled list-inline text-center">
@@ -106,6 +89,7 @@
       <!-- Copyright -->
       <div  style="background-color:#142440;" class="footer-copyright text-center py-3">
         Copyright© 2023: Design and Develop by Team Duo
+      </div>
       </div>
     </footer>
 

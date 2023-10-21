@@ -7,7 +7,10 @@ namespace IUTLeague.Models
 	{
 		[Key]
 		public int Id { get; set; }
-		
+
+		/*[Column(TypeName = "nvarchar(255)")]
+		public string Logo { get; set; }*/
+
 		[Column(TypeName = "nvarchar(50)")]
 		public string Name { get; set; }
 

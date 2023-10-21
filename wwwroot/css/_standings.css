@@ -1,0 +1,56 @@
+﻿/* Center-align the table */
+table {
+    width: 100%;
+    margin: 20px auto;
+}
+
+/* Style for table headers */
+th {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Style for table rows */
+tr {
+    border-bottom: 1px solid #ddd;
+}
+
+    /* Style for alternating row colors */
+    tr:nth-child(even) {
+        background-color: #f5f5f5;
+    }
+
+/* Style for team logos */
+td:nth-child(2) img {
+    max-width: 30px; /* Adjust the maximum logo width */
+    height: auto;
+}
+
+/* Style for the top team (background color and bold) */
+tr:first-child {
+    background-color: #ffe600;
+    font-weight: bold;
+}
+
+/* Style for the goal difference (positive and negative) */
+td:nth-child(11) {
+    color: #009933; /* Green for positive goal difference */
+}
+
+    td:nth-child(11):not(:empty):before {
+        content: "+"; /* Display a plus sign for positive goal difference */
+        color: #009933;
+    }
+
+    td:nth-child(11):empty:before {
+        content: "-";
+        color: #ff3300; /* Red for negative goal difference */
+    }
+
+/* Style for the "Last 5" column */
+td:last-child {
+    font-weight: bold;
+    color: #ffcc00; /* Yellow color for "Last 5" */
+}
