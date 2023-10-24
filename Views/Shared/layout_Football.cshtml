@@ -1,12 +1,13 @@
-﻿@{
-    Layout = "_Layout";
-}
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-    
-    @*<title>@ViewData["Title"] - FootballLeague</title>*@
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - IUTLeague</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.syncfusion.com/ej2/22.2.5/material.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/IUTLeague.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://cdn.syncfusion.com/ej2/22.2.5/dist/ej2.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" referrerpolicy="no-referrer" />
@@ -15,10 +16,27 @@
     <script src="https://kit.fontawesome.com/4d0b4c932e.js" crossorigin="anonymous"></script>
 
 </head>
-
-
 <body>
-@*header starts here*@
+    <header class="head-area">
+        <div class="header-container">
+            <div class="logo">
+                <h1><span>IUT</span>League</h1>
+            </div>
+            <div class="mobile-nav">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="menu">
+                <ul class="menu1">
+                    <li><a asp-controller="Home" asp-action="Index" class="active">Home</a></li>
+                    <li><a asp-controller="Home" asp-action="About" class="">About</a></li>
+                    <li><a asp-controller="Home" asp-action="News" class="">News</a></li>
+                    <li><a asp-controller="Home" asp-action="AdminLogin" class="">Admin login</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <header class="sport-head-area">
         <div class="sport-header-container">
             <div class="sport-logo">
                 <h1><span>Football</span>League</h1>
@@ -32,19 +50,67 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </header>
 
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-@*header ends here*@
 
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    @*Footer starts here*@
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            <div class="float-right">
+                <a asp-area="" asp-controller="Home" asp-action="Privacy">
+                    <i class="fas fa-exclamation-circle privacy-icon"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    <ejs-scripts></ejs-scripts>
+
+
+
+    @*<div class="main"></div>*@
+    <footer id="Footer" style="background-color:#142440;" class="page-footer font-small pt-4">
+        <div style="background-color:#142440;" class="container text-center text-md-left">
+
+            <!-- Social buttons -->
+            <div class="hover-effect1">
+                <ul style="background-color:#142440;" class="list-unstyled list-inline text-center">
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/profile.php?id=61550107976889" title="Facebook"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.twitter.com" title="Twitter"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com" title="Instagram"><i class="fa fa-instagram"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.youtube.com" title="Youtube"><i class="fa fa-youtube"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#." title="Github"><i class="fa fa-github"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Copyright -->
+            <div style="background-color:#142440;" class="footer-copyright text-center py-3">
+                Copyright© 2023: Design and Develop by Team Duo
+            </div>
+        </div>
+    </footer>
+
+    @*Footer ends here*@
+
+
 </body>
-
+</html>

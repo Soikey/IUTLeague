@@ -4,14 +4,14 @@
 <head>
 	<link rel="stylesheet" href="~/css/_standings.css">
 </head>
-
 @model List<Team>
+
 	<head>
 		<meta charset="utf-8" />
 		<title>Standings</title>
-		</head>
-		<body>
-
+	</head>
+	<body>
+	<div class="container">
 	<table>
 		<thead>
 			<tr>
@@ -50,10 +50,11 @@
 					</tr>
 				}
 			}
-			else
+			@*else
 			{
-				<p>No matches available.</p>
-			}
+				<p>No teams available.</p>
+			}*@
 		</tbody>
 	</table>
-</body></html>
+	</div>
+</body>
