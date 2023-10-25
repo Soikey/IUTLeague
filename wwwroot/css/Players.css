@@ -44,7 +44,7 @@ a {
     text-decoration: none;
 }
 
-.container {
+#player_container {
     width: min(100% - 2rem, 65rem);
     margin-inline: auto;
 }
@@ -86,7 +86,8 @@ a {
 }
 
 /* starts here */
-.card {
+
+#player_card {
     display: grid;
     gap: 0.5rem;
     position: relative;
