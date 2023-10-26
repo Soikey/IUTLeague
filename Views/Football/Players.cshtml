@@ -1,27 +1,25 @@
-﻿@*@{
+﻿@{
     Layout = "layout_Football";
 }
-*@
+
 @{
     ViewData["Title"] = "Players";
 }
-@*<head>
-    <link rel="stylesheet" href="~/css/Football.css">
-</head>*@
+
 @model List<Player>
 
 
-    <nav class="navbar navbar-expand-lg" style="background-color: #9e32a8;" >
-        <div class="container-fluid">
+@*    <nav class="navbar navbar-expand-lg" style="color: #9e32a8;" >
+        <div class="container">
             <div class="sport-logo">
                 <h1><span>Football</span>League</h1>
             </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color: #ffffff;>
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="color: #9e32a8;">
 
-            @*<div class="football-menu">*@
+            @*<div class="football-menu">
                 <ul class="navbar-nav">
                     <li class="nav-item" ><a asp-controller="Football" asp-action="Matches" class="active">MATCHES </a></li>
                     <li class="nav-item"><a asp-controller="Football" asp-action="Standings" class="">STANDINGS </a></li>
@@ -30,7 +28,7 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav>*@
 
     <div class="container" id="player_container">
         <div class="row">

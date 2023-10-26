@@ -8,18 +8,18 @@ $silver: #b4b4b4;
 $cyan: #1192B0;
 */
 
-body {
+/*body {
     color: mediumpurple;
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;*/
     /*background: linear-gradient(to bottom, #0074E4, #001F4D);*/
-    background: linear-gradient(to bottom, #000000, #FFFFFF);
+    /*background: linear-gradient(to bottom, #000000, #FFFFFF);
     height: 50px;
     margin-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+}*/
 
 
 .sport-head-area {
@@ -41,16 +41,16 @@ body {
     padding: 10px 0;
 }
 
-.logo h1 {
+.sport-logo h1 {
     color: #fff;
     font-size: 35px;
     font-weight: 600;
     padding: 5px;
 }
 
-.logo span {
-    color: #ff4a44;
-}
+    .sport-logo span {
+        color: #d474d2;
+    }
 
 .football-menu {
     float: inherit; /**********************  CENTER dite hobe ***********/

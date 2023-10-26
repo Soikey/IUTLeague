@@ -6,10 +6,6 @@
     ViewData["Title"] = "Matches";
 }
 
-<head>
-    <link rel="stylesheet" href="~/css/Football.css">
-</head>
-
 @model List<Match>
 
 
@@ -27,8 +23,8 @@
                     <li><a asp-controller="Football" asp-action="Players" class="">PLAYERS</a></li>
                 </ul>
             </div>
-        </div>*@
-    </header>
+        </div>
+    </header>*@
 
     <div class="container">
         @if (Model != null && Model.Count > 0)
