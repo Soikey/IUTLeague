@@ -1,20 +1,21 @@
-﻿@{
-	Layout = "layout_Football";
-}
-
+﻿
 @{
     ViewData["Title"] = "Standings";
+    Layout = "~/Views/Shared/layout_Football.cshtml";
 }
+
+<head>
+	<link rel="stylesheet" href="~/css/Standings.css">
+</head>
 
 @model List<Team>
 
-
-	<div class="container">
+<div class="container">
 	<table>
 		<thead>
 			<tr>
 				<th>No.</th>
-				@*<th>Logo</th>*@
+				<th>Logo</th>
 				<th scope="col" class="px-6 py-3 text-left tracking-wider">Name</th>
 				<th scope="col" class="px-6 py-3 text-left tracking-wider">MP</th>
 				<th scope="col" class="px-6 py-3 text-left tracking-wider">W</th>
@@ -28,13 +29,27 @@
 			</tr>
 		</thead>
 		<tbody>
+			<tr>
+				<td class="px-6 py-4 whitespace-nowrap">#</td>
+				<td class="flex px-6 py-4 whitespace-nowrap"><img class="w-5" src="p6.jpg" alt="Logo" />p6.jpg</td>
+				<td class="px-6 py-4 whitespace-nowrap">Soikey</td>
+				<td class="px-6 py-4 whitespace-nowrap">99</td>
+				<td class="px-6 py-4 whitespace-nowrap">99</td>
+				<td class="px-6 py-4 whitespace-nowrap">0</td>
+				<td class="px-6 py-4 whitespace-nowrap">0</td>
+				<td class="px-6 py-4 whitespace-nowrap">200</td>
+				<td class="px-6 py-4 whitespace-nowrap">100</td>
+				<td class="px-6 py-4 whitespace-nowrap">2</td>
+				<td class="px-6 py-4 whitespace-nowrap">98</td>
+				<td class="px-6 py-4 whitespace-nowrap">#######</td>
+			</tr>
 			@if (Model != null && Model.Count > 0)
 			{
 				@foreach (var Team in Model)
 				{
 					<tr>
 						<td class="px-6 py-4 whitespace-nowrap">#</td>
-						@*<td class="flex px-6 py-4 whitespace-nowrap"><img class="w-5" src="@Team.Logo" alt="Logo" />@Team.Logo</td>*@
+						<td class="flex px-6 py-4 whitespace-nowrap"><img class="w-5" src="p6.jpg" alt="Logo" />p6.jpg</td>
 						<td class="px-6 py-4 whitespace-nowrap">@Team.Name</td>
 						<td class="px-6 py-4 whitespace-nowrap">@Team.GamesPlayed</td>
 						<td class="px-6 py-4 whitespace-nowrap">@Team.Wins</td>
@@ -50,9 +65,8 @@
 			}
 			@*else
 			{
-				<p>No teams available.</p>
+			<p>No teams available.</p>
 			}*@
 		</tbody>
 	</table>
-	</div>
-
+</div>

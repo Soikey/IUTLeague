@@ -1,72 +1,67 @@
-﻿@{
-    Layout = "layout_Football"; 
-}
-
+﻿
 @{
     ViewData["Title"] = "Matches";
+    Layout = "~/Views/Shared/layout_Football.cshtml";
 }
 
 <head>
-    <link rel="stylesheet" href="~/css/Football.css">
+    <link rel="stylesheet" href="~/css/Matches.css">
 </head>
 
 @model List<Match>
 
-
-
-    @*<header class="sport-head-area">
-        <div class="sport-header-container">
-            <div class="sport-logo">
-                <h1><span>Football</span>League</h1>
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-content">
+                <div class="teams">
+                    <p>Man U</p>
+                    <p></p>
+                    <p>Arsenal</p>
+                </div>
+                <div class="scores">
+                    <h1>5</h1>
+                    <p clss="vs-inactive">vs</p>
+                    <h1>3</h1>
+                </div>
+                <div class="locations">
+                    <span><i class="fa fa-map-marker-alt"></i>Old Trafford</span>
+                </div>
             </div>
-            <div class="football-menu">
-                <ul class="football-menu1">
-                    <li><a asp-controller="Football" asp-action="Matches" class="active">MATCHES</a></li>
-                    <li><a asp-controller="Football" asp-action="Standings" class="">STANDINGS</a></li>
-                    <li><a asp-controller="Football" asp-action="Stats" class="">STATS</a></li>
-                    <li><a asp-controller="Football" asp-action="Players" class="">PLAYERS</a></li>
-                </ul>
-            </div>
-        </div>*@
-    </header>
+        </div>
+    </div>
+</div>
 
-    <div class="container">
-        @if (Model != null && Model.Count > 0)
+<div class="container">
+    @if (Model != null && Model.Count > 0)
+    {
+        @foreach (var Match in Model)
         {
-            @foreach (var Match in Model)
-            {
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-content">
-                                <div class="teams">
-                                    <p>@Match.Home_Team</p>
-                                    <p></p>
-                                    <p>@Match.Away_Team</p>
-                                </div>
-                                <div class="scores">
-                                    <h1>@Match.Home_Goals</h1>
-                                    <p class="vs-inactive">vs</p>
-                                    <h1>@Match.Away_Goals</h1>
-                                </div>
-                                <div class="locations">
-                                    <span><i class="fa fa-map-marker-alt"></i>Old Trafford</span>
-                                    <span></span>
-                                    <span><i class="fas fa-location-arrow"></i>Manchester</span>
-                                </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="teams">
+                                <p>@Match.Home_Team</p>
+                                <p></p>
+                                <p>@Match.Away_Team</p>
                             </div>
-                            <div class="card-footer card-footer-inactive">
-                                <i class="fa fa-list-alt"></i> See Details
-                                <i class="far fa-arrow-alt-circle-right float-right"></i>
+                            <div class="scores">
+                                <h1>@Match.Home_Goals</h1>
+                                <p class="vs-inactive">vs</p>
+                                <h1>@Match.Away_Goals</h1>
+                            </div>
+                            <div class="locations">
+                                <span><i class="fa fa-map-marker-alt"></i>Old Trafford</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            }
+            </div>
         }
-        else
-        {
-            <p>No matches available.</p>
-        }
-    </div>
-
+    }
+    else
+    {
+        <p>No matches available.</p>
+    }
+</div>

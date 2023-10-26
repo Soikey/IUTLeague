@@ -1,64 +1,4 @@
-﻿/*
-///////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////
-
-    Abandoned file
-
-///////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////
-
-
-*/
-
-/*:root {
-    --clr-primary: teal;
-    --clr-secondary: crimson;
-    --bg-primary: #0d1a2d;
-    --bg-secondary: #14273e;
-    --text-primary: #fff;
-    --text-secondary: #ccc;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-* {
-    margin: 0;
-    font: inherit;
-}
-
-html {
-    color-scheme: dark;
-}
-
-body {
-    font-family: system-ui, sans-serif;
-    min-height: 100vh;
-    background-color: var(--bg-primary);
-    color: var(--text-secondary);
-}
-
-ul:where([role="list"]) {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-section {
-    padding-block: clamp(2rem, 5vw, 5rem);
-}
-
-a {
-    color: cyan;
-    text-decoration: none;
-}
-
-#player_container {
+﻿.player_container {
     width: min(100% - 2rem, 65rem);
     margin-inline: auto;
 }
@@ -97,11 +37,10 @@ a {
 .mx-auto {
     width: fit-content;
     margin-inline: auto;
-}*/
+}
 
-/* starts here */
 
-/*#player_card {
+#player_card {
     display: grid;
     gap: 0.5rem;
     position: relative;
@@ -205,4 +144,4 @@ a {
 
 .card[data-visible="true"] .card__toggle-icon {
     rotate: 315deg;
-}*/
+}

@@ -30,7 +30,7 @@ td:nth-child(2) img {
 
 /* Style for the top team (background color and bold) */
 tr:first-child {
-    background-color: #ffe600;
+    background-color: #ebeae1;
     font-weight: bold;
 }
 
