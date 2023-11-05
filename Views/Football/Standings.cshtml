@@ -11,7 +11,7 @@
 @model List<Team>
 
 <div class="container">
-	<table>
+	<table id="playersTable">
 		<thead>
 			<tr>
 				<th>No.</th>
@@ -43,6 +43,21 @@
 				<td class="px-6 py-4 whitespace-nowrap">98</td>
 				<td class="px-6 py-4 whitespace-nowrap">#######</td>
 			</tr>
+			<tr>
+				<td class="px-6 py-4 whitespace-nowrap">#</td>
+				<td class="flex px-6 py-4 whitespace-nowrap"><img class="w-5" src="../css/p5.jpg" alt="Logo" />image</td>
+				<td class="px-6 py-4 whitespace-nowrap">Fuad</td>
+				<td class="px-6 py-4 whitespace-nowrap">23</td>
+				<td class="px-6 py-4 whitespace-nowrap">123</td>
+				<td class="px-6 py-4 whitespace-nowrap">0</td>
+				<td class="px-6 py-4 whitespace-nowrap">0</td>
+				<td class="px-6 py-4 whitespace-nowrap">200</td>
+				<td class="px-6 py-4 whitespace-nowrap">100</td>
+				<td class="px-6 py-4 whitespace-nowrap">2</td>
+				<td class="px-6 py-4 whitespace-nowrap">98</td>
+				<td class="px-6 py-4 whitespace-nowrap">#######</td>
+			</tr>
+
 			@if (Model != null && Model.Count > 0)
 			{
 				@foreach (var Team in Model)
@@ -69,4 +84,36 @@
 			}*@
 		</tbody>
 	</table>
+
+
+	<link url="Datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+	@SectionWriters scripts{
+		$(document).ready(function){
+			$("#playersTable").DataTable(
+				{
+					"ajax": {
+						"url": "/Players/GetList",
+						"type": "GET",
+						"datatype": "json"
+					},
+					"columns": [
+						{ "data": "Name"},
+						{ "data": "MP"},
+						{ "data": "W"},
+						{ "data": "D"},
+						{ "data": "L"},
+						{ "data": "Pts"},
+						{ "data": "GF"},
+						{ "data": "GA"},
+						{ "data": "GD"},
+						{ "data": "Last 5"}
+
+					]
+				}
+			)
+		}
+	}
+
+
 </div>
