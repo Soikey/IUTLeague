@@ -206,7 +206,7 @@ body {
     -webkit-box-align: end;
     align-items: flex-end;
     overflow: hidden;
-    padding: 1rem;
+    padding: 3rem;
     width: 100%;
     text-align: center;
     /*color: olivedrab;*/
@@ -215,9 +215,9 @@ body {
     border-radius: 15px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 450px) {
     .card {
-        height: 350px;
+        height: 250px;
     }
 }
 
@@ -256,43 +256,71 @@ body {
     transition: transform calc(var(--d) * 2) var(--e), -webkit-transform calc(var(--d) * 2) var(--e);
 }
 
-.card1{
+.card1 {
     background-image: url('Football.jpg');
+    background-size: cover; /* Scale the background image to cover the entire card */
+    background-position: center;
+    transition: all 0.8s;
 }
 
 .card2 {
     background-image: url('basketball_ball.png');
+    background-size: cover; /* Scale the background image to cover the entire card */
+    background-position: center;
+    transition: all 0.8s;
 }
 
 .card3 {
     background-image: url('Badminton.png');
+    background-size: cover; /* Scale the background image to cover the entire card */
+    background-position: center;
+    transition: all 0.8s;
 }
 
 .card4 {
     background-image: url('Chess.png');
+    background-size: cover; /* Scale the background image to cover the entire card */
+    background-position: center;
+    transition: all 0.8s;
 }
 
 .card5 {
     background-image: url('Cricket.png');
+    background-size: cover; /* Scale the background image to cover the entire card */
+    background-position: center;
+    transition: all 0.8s;
 }
 
 .card6 {
     background-image: url('Volleyball.png');
+    background-size: cover; /* Scale the background image to cover the entire card */
+    background-position: center;
+    transition: all 0.8s;
 }
 .card7 {
     background-image: url('Tennis.png');
+    background-size: cover; /* Scale the background image to cover the entire card */
+    background-position: center;
+    transition: all 0.8s;
 }
 
 .card8 {
     background-image: url('Table_Tennis.png');
+    background-size: cover; /* Scale the background image to cover the entire card */
+    background-position: center;
+    transition: all 0.8s;
 }
 
+    .card1:hover, .card2:hover, .card3:hover, .card4:hover, .card5:hover, .card6:hover, .card7:hover, .card8:hover {
+        transform: scale(1.1);
+    }
 
 
 .content {
     position: relative;
     display: -webkit-box;
-    display: flex;
+    display: none;
+    color: #000000;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     flex-direction: column;
@@ -327,6 +355,9 @@ body {
     }
 
     .content {
+        color: #000000;
+        bottom: 0;
+        display: flex;
         -webkit-transform: translateY(calc(100% - 4.5rem));
         transform: translateY(calc(100% - 4.5rem));
     }
@@ -344,7 +375,7 @@ body {
     .card:hover,
     .card:focus-within {
         -webkit-box-align: center;
-        align-items: center;
+        /*align-items: center;*/
     }
 
         .card:hover:before,
@@ -361,6 +392,7 @@ body {
 
         .card:hover .content,
         .card:focus-within .content {
+            color: #ffff00;
             -webkit-transform: translateY(0);
             transform: translateY(0);
         }
