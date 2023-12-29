@@ -59,7 +59,7 @@ namespace IUTLeague.Controllers
             return View();
         }
 
-        public IActionResult AdminKhelbe()
+        public IActionResult Admin_Dashboard()
         {
             return View();
         }

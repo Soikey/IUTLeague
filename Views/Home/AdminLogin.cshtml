@@ -37,9 +37,13 @@
                                 <div class="col-lg-6 login-btm login-text">
                                     <!-- Error Message -->
                                 </div>
-                                <div class="col-lg-6 login-btm login-button">
-                                    <button type="submit" value="AdminLogin" class="btn btn-outline-primary">LOGIN</button>
-                                </div>
+                                    <div class="col-lg-6 login-btm login-button">
+                                        <button id="adminLoginButton" type="submit" value="AdminVerify" class="btn btn-outline-primary">
+                                            <a asp-controller="Admin" asp-action="Admin_Dashboard" class="">
+                                                LOGIN
+                                            </a>
+                                        </button>
+                                    </div>
                             </div>
                         </form>
                     </div>

@@ -43,8 +43,8 @@ namespace IUTLeague.Controllers
         public IActionResult AdminVerify()
         {
             // Get the username and password from the request.
-            string username = Request.Form["username"];
-            string password = Request.Form["password"];
+            string username = Request.Form["Username"];
+            string password = Request.Form["Password"];
 
             // Call the verification method in the AdminController.
             AdminController adminController = new AdminController(_context);
@@ -59,7 +59,7 @@ namespace IUTLeague.Controllers
                 // If the user is an admin, redirect the user to the Admin/Dashboard view.
                 if (isAdmin)
                 {
-                    return RedirectToAction("Dashboard", "Admin");
+                    return RedirectToAction("Admin_Dashboard", "Admin");
                 }
             }
 
