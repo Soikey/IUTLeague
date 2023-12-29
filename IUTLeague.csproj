@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Admin\AdminKhelbe.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Views\Admin\AdminKhelbe.html" />
     <None Remove="Views\Admin\htmlpage.html" />
   </ItemGroup>
