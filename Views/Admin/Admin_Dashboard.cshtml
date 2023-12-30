@@ -24,9 +24,9 @@
                     <li><a href="index.php?c=product&a=list02"><span class="fa fa-tags"></span>TEAMS</a></li>
                 </ul>
             </li>
-            <li><a href="menu_list.php"><span class="fa fa-sitemap"></span>MENU</a></li>
-            <li><a href="invoice_list.php"><span class="fa fa-money"></span>INVOICE</a></li>
-            <li><a href="user_list.php"><span class="fa fa-user-o"></span>REFEREE</a></li>
+            <li><a href="menu_list.php"><span class="fa fa-sitemap"></span>Referees</a></li>
+            <li><a href="invoice_list.php"><span class="fa fa-money"></span>Managers</a></li>
+            <li><a href="user_list.php"><span class="fa fa-user-o"></span>Players</a></li>
             <li><a href="contact_list.php"><span class="fa fa-envelope-o"></span>SANDBOX</a></li>
         </ul>
     </div>
@@ -70,25 +70,25 @@
 <!--             GROUP -->
             <div class="groupInput">
                 <select name="">
-                    <option value="">Brand</option>
-                    <option value="">Brand 01</option>
-                    <option value="">Brand 02</option>
+                    <option value="">Team</option>
+                    <option value="">Player</option>
+                    <option value="">Match</option>
                 </select> 
                 <select name="">
-                    <option value="">Category</option>
-                    <option value="">Category 01</option>
-                    <option value="">Category 02</option>
+                    <option value="">Points</option>
+                    <option value="">Goals</option>
+                    <option value="">salary</option>
                 </select>
                 <select name="">
-                    <option value="">Author</option>
-                    <option value="">Author 01</option>
-                    <option value="">Author 02</option>
+                    <option value="">Manager</option>
+                    <option value="">Referee</option>
+                    <option value="">Liner</option>
                 </select>
             </div>
 <!--             END GROUP -->             
 <!--             GROUP -->
             <div class="groupInput">
-                <p class="titleInput">Price</p> 
+                <p class="titleInput">Salary</p> 
                 <div id="filterPrice"></div>
                 <div class="areaValue">
                     <p>From</p>
@@ -111,7 +111,7 @@
     <div class="table">
         <div class="row bg-1">
             <div class="cell cell-50 text-center text-fff">ID</div>
-            <div class="cell cell-100 text-center text-fff">CATEGORY</div>
+            <div class="cell cell-100 text-center text-fff">Position</div>
             <div class="cell cell-100 text-fff">IMAGE</div>
             <div class="cell cell-100p text-fff">NAME</div>
             <div class="cell cell-100 text-center text-fff"><input type="checkbox" class="checkbox checkAll" name="statusAll" target=".status"></div>
@@ -125,7 +125,7 @@
                 <div class="cell cell-100 text-center">
                     <a href=""><img src="http://bookstore.crunchpress.com/wp-content/uploads/2013/05/b2.jpg" alt="" width="50"></a>
                 </div>
-                <div class="cell cell-100p"><a href="">PRODUCT 01</a></div>
+                <div class="cell cell-100p"><a href="">Players</a></div>
                 <div class="cell cell-100 text-center">
                     <input type="hidden" class="status" name="status" value="0">
                     <input type="checkbox" class="btnSwitch status" name="status">
@@ -140,7 +140,7 @@
                 <div class="cell cell-100 text-center">
                     <a href=""><img src="http://bookstore.crunchpress.com/wp-content/uploads/2013/05/b2.jpg" alt="" width="50"></a>
                 </div>
-                <div class="cell cell-100p"><a href="">PRODUCT 01</a></div>
+                <div class="cell cell-100p"><a href="">Teams</a></div>
                 <div class="cell cell-100 text-center">
                     <input type="hidden" class="status" name="status" value="0">
                     <input type="checkbox" class="btnSwitch status" name="status">
@@ -157,7 +157,7 @@
 <!-- CATE LIST    -->
 <form action="" method="GET" name="listForm" class="form scrollX">
     <div class="formHeader row">
-        <h2 class="text-1 fl">Product List</h2>
+        <h2 class="text-1 fl">Player List</h2>
         <div class="fr">
             <button type="submit" class="btnSave bg-1 text-fff text-bold fr">SAVE</button><a href="" class="btnAdd fa fa-plus bg-1 text-fff"></a>
         </div>
@@ -165,7 +165,7 @@
     <div class="table">
         <div class="row bg-1">
             <div class="cell cell-50 text-center text-fff">ID</div>
-            <div class="cell cell-100 text-center text-fff">PARENT</div>
+            <div class="cell cell-100 text-center text-fff">Team</div>
             <div class="cell cell-100p text-fff">NAME</div>
             <div class="cell cell-50 text-center text-fff">RANK</div>
             <div class="cell cell-50"><input type="checkbox" class="checkbox caretAll"></div>
@@ -176,7 +176,7 @@
             <li class="row">
                 <div class="cell cell-50 text-center">1</div>
                 <div class="cell cell-100 text-center">0</div>
-                <div class="cell cell-100p"><a href="">CATE 1</a></div>
+                <div class="cell cell-100p"><a href="">Name</a></div>
                 <div class="cell cell-50 text-center"><input type="number" name="rank[]" class="inputNumber"></div>
                 <div class="cell cell-50 text-center"><span class="fa fa-caret-down btnCaret"></span></div>
                 <div class="cell cell-100 text-center">
@@ -185,8 +185,8 @@
                 <ul class="sublist">
                     <li class="row">
                         <div class="cell cell-50 text-center">ID</div>
-                        <div class="cell cell-100 text-center">PARENT</div>
-                        <div class="cell cell-100p"><a href="">PRODUCT 2</a></div>
+                        <div class="cell cell-100 text-center">Team</div>
+                        <div class="cell cell-100p"><a href="">Name</a></div>
                         <div class="cell cell-50 text-center"><span class="fa fa-caret-down btnCaret"></span></div>
                         <div class="cell cell-100 text-center">
                             <a href="" class="btnEdit fa fa-pencil bg-1 text-fff"></a><a href="" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a> 
@@ -194,8 +194,8 @@
                         <ul class="sublist">
                             <li>
                                 <div class="cell cell-50 text-center">ID</div>
-                                <div class="cell cell-100 text-center">PARENT</div>
-                                <div class="cell cell-100p"><a href="">PRODUCT 2</a></div>
+                                <div class="cell cell-100 text-center">Team</div>
+                                <div class="cell cell-100p"><a href="">Name</a></div>
                                 <div class="cell cell-50"></div>
                                 <div class="cell cell-100 text-center">
                                     <a href="" class="btnEdit fa fa-pencil bg-1 text-fff"></a><a href="" class="btnRemove fa fa-remove bg-1 text-fff" onclick='return confirm("Do you really want to remove it ?")'></a> 
@@ -213,9 +213,9 @@
 <!-- DETAIL FORM -->
 <form action="" method="POST" enctype="multipart/form-data" class="form">
     <div class="formHeader row">
-        <h2 class="text-1 fl">Product Detail</h2>
+        <h2 class="text-1 fl">Add New</h2>
         <div class="fr">
-            <button type="submit" class="btnSave bg-1 text-fff text-bold fr">SAVE</button><a href="" class="btnAdd fa fa-plus bg-1 text-fff"></a>
+            <button type="submit" class="btnSave bg-1 text-fff text-bold fr">ADD</button><a href="" class="btnAdd fa fa-plus bg-1 text-fff"></a>
         </div>
     </div>
     <div class="formBody row">
@@ -225,15 +225,15 @@
                 <span><input type="text" name="name"></span>
             </label>
             <label class="inputGroup">
-                <span>Code</span>
+                <span>Age</span>
                 <span><input type="text" name="code"></span>
             </label>
             <label class="inputGroup">
-                <span>Price</span>
+                <span>Salary</span>
                 <span><input type="text" name="price"></span>
             </label>
             <label class="inputGroup">
-                <span>Note</span>
+                <span>Deligation</span>
                 <span><input type="text" name="note"></span>
             </label>
         </div>
@@ -244,17 +244,22 @@
                     <select name="cate">
                         <option value="cate01">Player</option>
                         <option value="cate02">Match</option>
+                        <option value="cate03">Team</option>
+                        <option value="cate04">Coach</option>
+                        <option value="cate05">Manager</option>
+                        <option value="cate06">Administrator</option>
+                        <option value="cate02">Referee</option>
                     </select>
                     <i class="btnNewInput fa fa-plus bg-1 text-fff"></i>
                 </span>
             </label>
             <label class="inputGroup hide">
-                <span>Brand</span>
+                <span>Nationality</span>
                 <span>
                     <input type="text" name="cate">
                     <select name="brand">
-                        <option value="cate01">Brand01</option>
-                        <option value="cate02">Brand02</option>
+                        <option value="cate01">Team01</option>
+                        <option value="cate02">Team02</option>
                     </select>
                 </span> 
             </label>
